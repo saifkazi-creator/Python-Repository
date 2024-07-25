@@ -1,1 +1,77 @@
+Database is a collection of tabular data.
+Suppose we have a dataset of movies with there info like imdb, genre,type,id etc...
+#1 SELECT:
+SELECT * FROM movies;
+here * means all.
+so it will give the output as all the data in movies 
+
+#2 WHERE:
+SELECT * FROM movies WHERE industry="bollywood";
+so output will neglect the data from hollywood.
+
+#3 COUNT
+if we want to return the count of bollywood movies 
+we use 
+SELECT COUNT(*) FROM movies WHERE industry="bollywood";
+
+#4 distinct
+SELECT DISTINCT FROM INDUSTRY;
+this will give o/p as bollywood 
+                      hollywood
+
+#5 LIKE
+for example we want all the thor named movies 
+we will type 
+SELECT * FROM movies WHERE title LIKE "%thor%";
+here % means anything can be there before and after thor 
+so we will get all the thor related movies.
+% is called wild card search
+
+#6 empty set
+SELECT * FROM movies WHERE studio=""
+"" means empty 
+
+#7 AND 
+SELECT * FROM movies WHERE imdb>6 AND imdb<9;
+
+#8 OR
+SELECT * FROM movies WHERE year=2020 OR year=2021 OR year=2019;
+
+#9 IN 
+SELECT * FROM movies WHERE year IN (2019,2020,2021);
+this will give the same o/p as #8
+SELECT * FROM movies WHERE studio IN ("Zee Studios");
+
+#10 NULL
+SELECT * FROM movies WHERE imdb is NULL;
+
+#11 ORDER BY
+arranges data in ascending order
+SELECT * FROM movies WHERE industry="bollywood"
+ORDER BY imdb;
+
+#12 ASC and DESC
+SELECT * FROM movies WHERE industry="bollywood"
+ORDER BY imdb DESC;
+arranges data in descending order
+
+#13 LIMIT
+SELECT * FROM movies WHERE industry="bollywood"
+ORDER BY imdb DESC LIMIT 5;
+gives top 5 movies with highest imdb ratings
+
+#14 OFFSET
+if we want to start with the second highest rating 
+SELECT * FROM movies WHERE industry="bollywood"
+ORDER BY imdb DESC LIMIT 5 OFFSET 1;
+here 1 is the index.
+
+#15 MAX and MIN 
+SELECT MAX(imdb) WHERE industry="bollywood";
+returns maximun imdb of a bollywood movie 
+
+
+
+
+
 
