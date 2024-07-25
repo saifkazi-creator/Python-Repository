@@ -1,5 +1,6 @@
 Database is a collection of tabular data.
 Suppose we have a dataset of movies with there info like imdb, genre,type,id etc...
+
 #1 SELECT:
 SELECT * FROM movies;
 here * means all.
