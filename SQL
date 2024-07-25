@@ -70,6 +70,46 @@ here 1 is the index.
 SELECT MAX(imdb) WHERE industry="bollywood";
 returns maximun imdb of a bollywood movie 
 
+#16 AVG 
+returns average of ratings or anything 
+SELECT AVG(imdb) WHERE studio="Marvel Studios";
+ans:7.5000
+if we want to round it of to 2 decimal points 
+SELECT ROUND(AVG(imdb),2) WHERE studio="Marvel Studios";
+
+#17 as
+SELECT ROUND(AVG(imdb),2) as avg_reading,
+MAX(imdb) as max_reading, MIN(imdb) as min_reading
+WHERE studio="Marvel Studios";
+this will create the name of average min and max readings.
+
+#18 GROUP BY
+it means on what criteria u r grouping things.
+SELECT 
+industry,count(*)
+FROM movies
+GROUP BY industry;
+o/p:
+Hollywood:21
+Bollywood:18
+
+###example:
+SELECT
+studio,count(*) as cnt
+FROM movies
+GROUP BY studio 
+ORDER BY cnt DESC;
+
+isse cnt descending order mei print hoga 
+
+#19 WHERE 
+WHERE studio!=""
+in this the place where studio is blank will get removed.
+
+#20 
+
+
+
 
 
 
