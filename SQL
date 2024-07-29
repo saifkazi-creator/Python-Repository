@@ -107,7 +107,75 @@ isse cnt descending order mei print hoga
 WHERE studio!=""
 in this the place where studio is blank will get removed.
 
-#20 
+#20 ORDER BY
+DESC - used for descending order 
+ex ORDER BY customer_id DESC;
+SELECT--->FROM-->WHERE-->GROUP BY-->HAVING-->ORDER BY
+
+#21 HAVING
+SELECT release_year,count(*) as movies_count
+FROM movies
+GROUP BY release_year
+having imdb>2
+ORDER BY movies_count DESC
+
+#21 YEAR(CURDATE())
+returns the year of date.
+if we use CURDATE()
+it returns the current date.
+
+kisi ki age nikalni hai to 
+SELECT *,YEAR(CURDATE())-birth_year as age FROM actors;
+
+#22 IF condition
+IF(condition, if condition is true then what , if conditon is false then what)
+
+
+
+
+
+
+#JOIN
+SELECT 
+m.movie_id,title , budget , revenue , currency , unit
+FROM movies m
+JOIN financials f
+ON m.movie_id=f.movie_id:;
+
+--> INNER JOIN 
+It will take the common data between both the tables and display it.
+-->LEFT JOIN 
+It will take the data of both left and the intersection .
+-->RIGHT JOIN
+It will take the data of both right and the intersection .
+WE will do f.movie_id in the SELECT line.
+-->FULL JOIN
+It will take the whole data.
+
+In this we use the operation UNION
+SELECT 
+m.movie_id,title , budget , revenue , currency , unit
+FROM movies m
+LEFT JOIN financials f
+ON m.movie_id=f.movie_id:;
+
+UNION
+
+SELECT 
+f.movie_id,title , budget , revenue , currency , unit
+FROM movies m
+RIGHT JOIN financials f
+ON m.movie_id=f.movie_id:;
+
+-->USING
+SELECT 
+movie_id,title , budget , revenue , currency , unit
+FROM movies 
+JOIN financials f
+USING (movie_id);
+
+
+
 
 
 
