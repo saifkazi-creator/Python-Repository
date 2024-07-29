@@ -130,12 +130,16 @@ SELECT *,YEAR(CURDATE())-birth_year as age FROM actors;
 #22 IF condition
 IF(condition, if condition is true then what , if conditon is false then what)
 
+#23 CASE statement
+SELECT *,
+CASE
+    WHEN unit="thousands" THEN revenue/1000
+    WHEN unit="billions" THEN revenue*1000
+    ELSE revenue
+END as revenue_mln
+FROM financials;
 
-
-
-
-
-#JOIN
+#24 JOIN
 SELECT 
 m.movie_id,title , budget , revenue , currency , unit
 FROM movies m
