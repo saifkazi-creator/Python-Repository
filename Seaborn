@@ -61,6 +61,15 @@ alpha=0.5
 sns.set(style="dark")
 dark hojayega grid
 
+##SCATTER PLOT
+
+Marker change karna hai to..
+ek line add karege 
+m={"Male":"^","Female":"o"}
+sns.scatterplot(x=var.x,y=var.y,markers=m)
+
+
+
 
 
 
