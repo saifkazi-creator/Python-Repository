@@ -1,1 +1,66 @@
+#BAR PLOT#
+
+import seaborn as sns
+import matplotlib.pyplot as plt 
+import pandas as pd
+
+#jupiter notebook
+
+var=sns.load_dataset("penguins")
+var
+(o/p will show all the data)
+
+var=sns.barplot(x=var.island,y=var.bill_length_mm)
+plt.show()(ye karne se o/p mei jo extra line aayi hai wo hatt jayegi)
+
+agar var.island mei se var hatare ho to "island" likhna hai aurr , data=var likhna hai
+
+iss graph ko sex ke with resp diff karna hai to
+we use ,hue="sex"
+
+order change karne ke liye 
+
+order_1=["x","y","z"]
+var=sns.barplot(x=var.island,y=var.bill_length_mm,order=order_1)
+so it will change
+
+hue_order=["female","male"]
+ci=100
+interval kam zyada
+
+orient="v"
+vertical orientation
+"h" bhi skta hai
+
+color="b"
+blue hojayege saare bar
+
+palette="a"
+(iise error aayega but pata chlega ki kaunse colors available hai)
+
+saturation=1
+1-100 tk kuch bhi
+
+errcolor="r"
+interval ka color red hojayega
+
+errwidth=12
+interval ki width badh jayegi
+
+capsize=1
+cap ki size
+
+dodge="False"
+bars superimpose hojayenge
+
+alpha parameter
+color ko light ya dark krne ke liye
+
+alpha=0.5
+
+sns.set(style="dark")
+dark hojayega grid
+
+
+
 
